@@ -68,7 +68,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:backgroundTint="#D9D9D9"
-        android:text="Não tem conta? Cadastre-se"
+        android:text="Cadastre-se"
         android:textAlignment="center"
         android:textColor="#D9D9D9"
         android:textSize="14sp"
@@ -76,6 +76,16 @@
         app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+
+    <TextView
+        android:id="@+id/RecSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Esqueceu sua senha?"
+        android:textColor="#D9D9D9"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin"
+        tools:layout_editor_absoluteX="246dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
