@@ -7,17 +7,5 @@
     >
 
 
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="216dp"
-        android:layout_height="136dp"
-        android:src="@drawable/logo1"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="-11dp" />
-
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#FFDEC7"
 
 </androidx.constraintlayout.widget.ConstraintLayout>
