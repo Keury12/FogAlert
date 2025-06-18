@@ -80,6 +80,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/white"
+        android:backgroundTint="@color/white"
         android:src="@drawable/home"
         app:layout_constraintBottom_toBottomOf="@+id/icRelogio"
         app:layout_constraintEnd_toStartOf="@+id/icRelogio"
