@@ -1,43 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".history.Historico"
-    android:background="@color/white">
+    android:background="@color/white"
+    tools:context=".history.Historico">
 
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="220dp"
-        android:layout_height="100dp"
+        android:id="@+id/logo_historico"
+        android:layout_width="200dp"
+        android:layout_height="90dp"
         android:src="@drawable/logo1"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GUIA_superior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
     <View
-        android:id="@+id/view"
+        android:id="@+id/linha_superior"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/bege"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="85dp" />
+        tools:layout_editor_absoluteY="73dp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/text_historico"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Histórico Semanal"
         android:textColor="@color/black"
-        android:textStyle="bold"
         android:textSize="25dp"
-        android:layout_marginLeft="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/GUIA_esquerda"
+        app:layout_constraintTop_toBottomOf="@+id/logo_historico" />
+
+    <View
+        android:id="@+id/linha_inferior"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bege"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="658dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GUIA_inferior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GUIA_esquerda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GUIA_direita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <ImageButton
+        android:id="@+id/icCasa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:src="@drawable/home"
+        app:layout_constraintBottom_toBottomOf="@+id/icRelogio"
+        app:layout_constraintEnd_toStartOf="@+id/icRelogio"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@id/GUIA_esquerda"
+        app:tint="@color/gray" />
+
+    <ImageButton
+        android:id="@+id/icRelogio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:src="@drawable/historico"
+        app:layout_constraintEnd_toStartOf="@+id/icConfig"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/icCasa"
+        app:layout_constraintTop_toTopOf="@+id/GUIA_inferior"
+        app:tint="@color/gray" />
+
+    <ImageButton
+        android:id="@+id/icConfig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:src="@drawable/configuracao"
+        app:layout_constraintBottom_toBottomOf="@+id/icRelogio"
+        app:layout_constraintEnd_toEndOf="@id/GUIA_direita"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/icRelogio"
+        app:tint="@color/gray" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
