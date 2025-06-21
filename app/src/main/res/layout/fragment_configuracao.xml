@@ -37,6 +37,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/GUIA_superior" />
 
+    <TextView
+        android:id="@+id/tv_perfilUSUARIO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Perfil do Usuário"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/box_Perfil"
+        app:layout_constraintStart_toStartOf="@+id/box_Perfil"
+        app:layout_constraintTop_toTopOf="@+id/box_Perfil" />
+
     <View
         android:id="@+id/box_Notificacao"
         android:layout_width="360dp"
@@ -47,6 +60,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/box_Perfil" />
 
+    <TextView
+        android:id="@+id/tv_notificacoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notificações"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/box_Notificacao"
+        app:layout_constraintTop_toTopOf="@+id/box_Notificacao" />
+
     <View
         android:id="@+id/box_Seguranca"
         android:layout_width="360dp"
@@ -56,6 +82,68 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/box_Notificacao"/>
+
+    <TextView
+        android:id="@+id/tv_seguranca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Segurança"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/box_Seguranca"
+        app:layout_constraintTop_toTopOf="@+id/box_Seguranca" />
+
+    <TextView
+        android:id="@+id/tv_redefinir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Redefinir senha"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintStart_toStartOf="@+id/box_Seguranca"
+        app:layout_constraintTop_toBottomOf="@+id/tv_seguranca" />
+
+    <ImageButton
+        android:id="@+id/ib_redefinir"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/setadireita"
+        app:layout_constraintEnd_toEndOf="@+id/box_Seguranca"
+        app:layout_constraintHorizontal_bias="0.846"
+        app:layout_constraintStart_toEndOf="@+id/tv_redefinir"
+        tools:layout_editor_absoluteY="455dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_alterarEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alterar E-mail"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintStart_toStartOf="@+id/box_Seguranca"
+        app:layout_constraintTop_toBottomOf="@+id/tv_redefinir" />
+
+    <ImageButton
+        android:id="@+id/ib_alterar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/setadireita"
+        app:layout_constraintEnd_toEndOf="@+id/box_Seguranca"
+        app:layout_constraintHorizontal_bias="0.855"
+        app:layout_constraintStart_toEndOf="@+id/tv_alterarEmail"
+        app:layout_constraintTop_toBottomOf="@+id/ib_redefinir"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/linha_inferior"
@@ -73,9 +161,9 @@
         android:text="Sobre"
         android:textColor="@color/black"
         android:textSize="18dp"
-        app:icon="@drawable/sobre"
-
+        app:icon="@drawable/sobre2"
         app:iconSize="30dp"
+        android:textAlignment="textStart"
         android:backgroundTint="#D0D0D0"
         android:layout_marginBottom="30dp"
         app:layout_constraintBottom_toTopOf="@+id/GUIA_inferior"
@@ -141,5 +229,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/icRelogioC"
         app:tint="@color/gray" />
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
