@@ -32,7 +32,7 @@
     <!-- Botão com ícone alinhado -->
     <Button
         android:id="@+id/button"
-        android:layout_width="0dp"
+        android:layout_width="342dp"
         android:layout_height="63dp"
         android:backgroundTint="#FFDEC7"
         android:drawableLeft="@drawable/add"
@@ -52,7 +52,7 @@
     <!-- Quadro -->
     <View
         android:id="@+id/view3"
-        android:layout_width="340dp"
+        android:layout_width="380dp"
         android:layout_height="340dp"
         android:background="@drawable/quadro_borda"
         app:layout_constraintTop_toBottomOf="@id/button"
@@ -128,12 +128,96 @@
         android:layout_marginBottom="16dp" />
 
     <Button
-        android:id="@+id/button6"
-        android:layout_width="44dp"
-        android:layout_height="24dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="280dp"
-        tools:layout_editor_absoluteY="220dp" />
+        android:id="@+id/button2"
+        android:layout_width="61dp"
+        android:layout_height="30dp"
+        android:backgroundTint="#E5E4E3"
+        android:gravity="center"
+        android:text="Editar"
+        android:padding="2dp"
+        android:textColor="@color/orange"
+        android:textSize="14sp"
+        android:background="@drawable/borda"
+        android:layout_marginEnd="70dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/arredondar"
+        app:srcCompat="@drawable/lixeira3"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="69dp"
+        android:layout_height="82dp"
+        app:srcCompat="@drawable/fumaca"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="69dp"
+        android:layout_height="82dp"
+        app:srcCompat="@drawable/nivel"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:layout_marginTop="16dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="69dp"
+        android:layout_height="82dp"
+        app:srcCompat="@drawable/bomba"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Presença de fumaça"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Nível da fumaça"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Bomba de água"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="35dp" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
