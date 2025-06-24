@@ -162,7 +162,13 @@ e-mail &quot;ladiesinfugaltda@gmail.com&quot;. "
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv5" />
 
-
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="229dp"
+        tools:layout_editor_absoluteY="118dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
