@@ -6,19 +6,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.fogalert.R
+import com.example.fogalert.databinding.FragmentHistoricoBinding
 import com.example.fogalert.databinding.FragmentHomeBinding
 
-class Home : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
+class Historico : Fragment() {
+
+    private var _binding: FragmentHistoricoBinding? = null
     private val binding get() = _binding!!
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentHistoricoBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }
@@ -27,5 +29,4 @@ class Home : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
 }
