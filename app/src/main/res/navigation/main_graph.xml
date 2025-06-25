@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/splash"
+        android:name="com.example.fogalert.ui.Splash"
+        android:label="Splash" >
+        <action
+            android:id="@+id/action_splash_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.fogalert.ui.auth.Login"
+        android:label="Login" >
+        <action
+            android:id="@+id/action_login_to_home2"
+            app:destination="@id/home2" />
+        <action
+            android:id="@+id/action_login_to_info22"
+            app:destination="@id/info2" />
+    </fragment>
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.fogalert.ui.home.Home"
+        android:label="Home" >
+        <action
+            android:id="@+id/action_home2_to_add2"
+            app:destination="@id/add2" />
+        <action
+            android:id="@+id/action_home2_to_historico"
+            app:destination="@id/historico" />
+        <action
+            android:id="@+id/action_home2_to_configuracao2"
+            app:destination="@id/configuracao" />
+    </fragment>
+    <fragment
+        android:id="@+id/configuracao"
+        android:name="com.example.fogalert.ui.home.configuracao"
+        android:label="fragment_configuracao"
+        tools:layout="@layout/fragment_configuracao" >
+        <action
+            android:id="@+id/action_configuracao_to_home2"
+            app:destination="@id/home2" />
+        <action
+            android:id="@+id/action_configuracao_to_info2"
+            app:destination="@id/info2" />
+        <action
+            android:id="@+id/action_configuracao_to_historico"
+            app:destination="@id/historico" />
+    </fragment>
+    <fragment
+        android:id="@+id/add2"
+        android:name="com.example.fogalert.ui.add.Add"
+        android:label="Add" >
+        <action
+            android:id="@+id/action_add2_to_home2"
+            app:destination="@id/home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/historico"
+        android:name="com.example.fogalert.ui.home.Historico"
+        android:label="fragment_historico"
+        tools:layout="@layout/fragment_historico" >
+        <action
+            android:id="@+id/action_historico_to_home2"
+            app:destination="@id/home2" />
+        <action
+            android:id="@+id/action_historico_to_configuracao"
+            app:destination="@id/configuracao" />
+    </fragment>
+    <fragment
+        android:id="@+id/info2"
+        android:name="com.example.fogalert.ui.home.info"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" >
+        <action
+            android:id="@+id/action_info2_to_configuracao"
+            app:destination="@id/configuracao" />
+        <action
+            android:id="@+id/action_info2_to_login"
+            app:destination="@id/login" />
+    </fragment>
+</navigation>

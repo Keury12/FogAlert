@@ -1,24 +1,27 @@
-package com.example.fogalert.ui.home
+package com.example.fogalert.ui.auth
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.fogalert.R
-import com.example.fogalert.databinding.FragmentHomeBinding
+import com.example.fogalert.databinding.FragmentLoginBinding
+import com.example.fogalert.databinding.FragmentSplashBinding
 
-class Home : Fragment() {
+class Login : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentLoginBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }
@@ -27,5 +30,6 @@ class Home : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
 
 }
