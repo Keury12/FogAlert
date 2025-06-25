@@ -31,5 +31,17 @@ class Login : Fragment() {
         _binding = null
     }
 
+    private fun initListener(){
+        binding.btnLogin.setOnClickListener(){
+            validacao()
+        }
+
+        //falta tela de criar conta e recuperar senha
+
+    }
+
+    private fun validacao(){
+        val email = binding
+    }
 
 }

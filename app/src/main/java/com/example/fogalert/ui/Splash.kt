@@ -32,4 +32,18 @@ class Splash : Fragment() {
         _binding = null
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        Handler(Looper.getMainLooper()).postDelayed({checagemAuth()}, 3000)
+    }
+
+    private fun checagemAuth() {
+        findNavController().navigate(R.id.action_splash_to_login)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
 }
