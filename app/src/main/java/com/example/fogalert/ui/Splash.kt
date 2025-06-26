@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.navigation.fragment.findNavController
 import com.example.fogalert.R
 import com.example.fogalert.databinding.FragmentHistoricoBinding
@@ -35,7 +36,15 @@ class Splash : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Handler(Looper.getMainLooper()).postDelayed({checagemAuth()}, 3000)
+        // Inicia a animação
+        val rotateAnimation = AnimationUtils.loadAnimation(requireContext(), R.anim.rotate1)
+        binding.imageLoading.startAnimation(rotateAnimation)
+
+        // Espera 2 segundos e para a animação
+        view.postDelayed({
+            binding.imageLoading.clearAnimation()
+            // aqui você pode executar alguma ação, exibir conteúdo final, etc.
+        }, 2000)
     }
 
     private fun checagemAuth() {
