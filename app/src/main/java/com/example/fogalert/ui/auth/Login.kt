@@ -41,7 +41,14 @@ class Login : Fragment() {
     }
 
     private fun validacao(){
-        val email = binding
+        val email = binding.emailEditText.text.toString().trim()
+        val senha = binding.passwordEditText.text.toString().trim()
+
+        if (email.isNotBlank()){
+            if (senha.isNotBlank()){
+                findNavController().navigate(R.id.action_login_to_home2)
+            }
+        }
     }
 
 }
